@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Города</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../libs/fontawesome/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!---->
+</head>
+<body>
+    <section class="page">
+        <div class="page-wrapper">
+            <!-- Навигация по панели -->
+            <nav class="navigation-sidebar">
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="../pages/city.html"><i class="far fa-building"></i>Города</a>
+                        </li>
+                        <li>
+                            <a href="../pages/product.html"><i class="fas fa-boxes"></i>Товары</a>
+                        </li>
+                        <li>
+                            <a href="../pages/score.html"><i class="far fa-address-card"></i>Счета</a>
+                        </li>
+                        <li>
+                            <a href="../pages/statistic.html"><i class="far fa-chart-bar"></i>Статистика</a>
+                        </li>
+                        <li>
+                            <a href="../pages/users.html"><i class="far fa-user-circle"></i>Пользователи</a>
+                        </li>
+                        <li>
+                            <a href="../pages/group.html"><i class="fas fa-users"></i>Группы </a>
+                        </li>
+                        <li>
+                            <a href="../pages/mailings.html"><i class="far fa-paper-plane"></i>Рассылки</a>
+                        </li>
+                        <li>
+                            <a href="../pages/new-page.html"><i class="far fa-plus-square"></i>Доп. разделы</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Конец навигации по панели -->
+            <!-- Контент в панели управления -->
+            <div class="content-panel">
+                <header class="header">
+                    <div class="triger" id="trige">
+                        <button>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                    <div class="rectangle-statistic">
+                        <div class="rectangle-content">
+                            <div class="rectangle-statistic__group">
+                                <span>Оборот: </span><span name="col">0</span><span class="cours">rub</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="content-wrapper">
+                        <div class="content-wrap">
+                            <div class="table-header-two">
+                                <table cellpadding="0" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Название города</th>
+                                            <th>Функции</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table-content-two height">
+                                <table>
+                                    <tbody cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <a href="../pages/area.html">Полтава</a>
+                                            </td>
+                                            <td>
+                                                <div class="button-table">
+                                                    <a class="table-link" href="edit-city.html"><i class="fas fa-cogs"></i></a>
+                                                    <a href="#"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="footer">
+                        <div class="footer-button">
+                            <a class="button" href="../pages/add-city.html">Добавить город</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

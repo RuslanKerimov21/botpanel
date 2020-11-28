@@ -1,0 +1,162 @@
+<?php
+    $one = 'Конфеты 150 грн';
+    $two = 'Конфеты 200 грн';
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление продукта</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../libs/fontawesome/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!---->
+</head>
+<body>
+    <section class="page">
+        <div class="page-wrapper">
+            <nav class="navigation-sidebar">
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="../pages/city.html"><i class="far fa-building"></i>Города</a>
+                        </li>
+                        <li>
+                            <a href="../pages/product.html"><i class="fas fa-boxes"></i>Товары</a>
+                        </li>
+                        <li>
+                            <a href="../pages/score.html"><i class="far fa-address-card"></i>Счета</a>
+                        </li>
+                        <li>
+                            <a href="../pages/statistic.html"><i class="far fa-chart-bar"></i>Статистика</a>
+                        </li>
+                        <li>
+                            <a href="../pages/users.html"><i class="far fa-user-circle"></i>Пользователи</a>
+                        </li>
+                        <li>
+                            <a href="../pages/group.html"><i class="fas fa-users"></i>Группы </a>
+                        </li>
+                        <li>
+                            <a href="../pages/mailings.html"><i class="far fa-paper-plane"></i>Рассылки</a>
+                        </li>
+                        <li>
+                            <a href="../pages/new-page.html"><i class="far fa-plus-square"></i>Доп. разделы</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content-panel">
+                <header class="header">
+                    <div class="triger" id="trige">
+                        <button>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                    <div class="rectangle-statistic">
+                        <div class="rectangle-content">
+                            <div class="rectangle-statistic__group">
+                                <span>Оборот: </span><span name="col">0</span><span class="cours">rub</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="content-wrapper">
+                        <div class="content-wrap">
+                            <div class="block-wrapper block-prodct form-wrapper-add">
+                                <form action="" method="POST" id="filter_form">
+                                    <div class="sorts-wrap">
+                                        <div class="sort-item">
+                                            <label>Товар</label>
+                                            <select class="sort sort-product" name="block">
+                                                <option value="0">Не выбран</option>
+                                                <option value="1">Конфеты</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-add-post">
+                                        <div class="product-items">
+                                            <div class="product-item" id="block">
+                                               <div class="sort-item">
+                                                    <label>Цена</label>
+                                                    <select class="sort sort-product" name="block">
+                                                        <option value="1"><?=$one?></option>
+                                                        <option value="0"><?=$two?></option>
+                                                    </select>
+                                                </div>
+                                          <div class="form-group-wrap juctify">
+                                            <div class="form-group">
+                                              <label>Лот</label>
+                                              <input type="text" name="lot" id="txtvalue">
+                                            </div>
+                                            <div class="form-group">
+                                              <label>Цена</label>
+                                              <input type="text" name="price" class="price">
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label>Адрес</label>
+                                            <input type="text" name="adress" placeholder="Текст котрорый будет выводиться покупателю">
+                                          </div>
+                                        </div>
+                                        </div>
+                                        <div class="button-group">
+                                           <button onclick="addInput(this)" type="button" class="button button-add" id="hide">Ещё</button>
+                                           <button class="button button-add" type="submit">Добавить адрес</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let index = 2;
+        function addInput(ev){
+            if(index > 5){
+                ev.style.display = "none"
+                return
+            }
+            const form = document.getElementsByClassName("form-add-post")[0];
+            const products = form.querySelector(".product-items");
+            products.innerHTML += `<div class="product-item" id="block${index}">
+            <div class="sort-item">
+                <label>Цена</label>
+                <select class="sort sort-product" name="block-1${index}">
+                    <option  value="0"><?=$one?></option>
+                    <option value="1"><?=$one?> гр | <?=$two?>RUB</option>
+                </select>
+            </div>
+            <div class="form-group-wrap juctify">
+            <div class="form-group">
+            <label>Лот</label>
+            <input type="text" name="lot${index}" id="txtvalue${index}">
+            </div>
+            <div class="form-group">
+            <label>Цена</label>
+            <input type="text" name="price${index}" class="price">
+            </div>
+            </div>
+            <div class="form-group">
+            <label>Адрес</label>
+            <input type="text" name="adress${index}" placeholder="Текст котрорый будет выводиться покупателю">
+            </div>
+            </div>`;
+          index++;
+        }
+    </script>
+    <!-- Подключение скриптов -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- Конец документа -->
+</body>
+</html>

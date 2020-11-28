@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройка</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../libs/fontawesome/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!---->
+</head>
+<body>
+    <section class="page">
+        <div class="page-wrapper">
+            <nav class="navigation-sidebar">
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="../pages/city.html"><i class="far fa-building"></i>Города</a>
+                        </li>
+                        <li>
+                            <a href="../pages/product.html"><i class="fas fa-boxes"></i>Товары</a>
+                        </li>
+                        <li>
+                            <a href="../pages/score.html"><i class="far fa-address-card"></i>Счета</a>
+                        </li>
+                        <li>
+                            <a href="../pages/statistic.html"><i class="far fa-chart-bar"></i>Статистика</a>
+                        </li>
+                        <li>
+                            <a href="../pages/users.html"><i class="far fa-user-circle"></i>Пользователи</a>
+                        </li>
+                        <li>
+                            <a href="../pages/group.html"><i class="fas fa-users"></i>Группы </a>
+                        </li>
+                        <li>
+                            <a href="../pages/mailings.html"><i class="far fa-paper-plane"></i>Рассылки</a>
+                        </li>
+                        <li>
+                            <a href="../pages/new-page.html"><i class="far fa-plus-square"></i>Доп. разделы</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content-panel">
+                <header class="header">
+                    <div class="triger" id="trige">
+                        <button>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                    <div class="rectangle-statistic">
+                        <div class="rectangle-content">
+                            <div class="rectangle-statistic__group">
+                                <span>Оборот: </span><span name="col">0</span><span class="cours">rub</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="content-wrapper">
+                        <div class="form-wrapper-add score-wrapper-add label-width">
+                            <form action="" method="POST">
+                                <div class="form-item score-item">
+                                    <div class="form-group">
+                                        <label>Изменить информацию по товару</label>
+                                        <input type="text" name="edit-poduct" placeholder="Введите новое название">
+                                    </div>
+                                </div>
+                                <div class="button-form">
+                                    <button class="button" type="submit">Изменить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Подключение скриптов -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- Конец документа -->
+</body>
+</html>
